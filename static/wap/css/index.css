@@ -628,8 +628,6 @@ a {
     align-items: center;
 }
 .price > p {
-    width: 100%;
-    max-width: 750px;
     color: #127a59;
     padding: 12px 0 15px 0;
     position: relative;
@@ -734,6 +732,7 @@ a {
     background: #fff;
     text-align: center;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .news > p:nth-of-type(1) {
     text-align: center;
@@ -816,6 +815,7 @@ a {
 }
 .news ul:nth-of-type(3) {
     display: flex;
+    flex-wrap: wrap;
 }
 .news ul:nth-of-type(3) a {
     display: flex;
@@ -844,6 +844,66 @@ a {
 .news ul:nth-of-type(3) li div span {
     font-size: 12px;
     color: #666666;
+}
+.news > a:last-child {
+    display: block;
+    width: 200px;
+    height: 26px;
+    line-height: 26px;
+    vertical-align: middle;
+    background: #127a59;
+    color: #fff;
+    margin: 10px auto 5px auto;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+/* footer */
+.footer {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+}
+.footer a {
+    display: block;
+    width: 100%;
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.footer a span {
+    font-size: 20px;
+    color: #127a59;
+}
+.footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer ul li {
+    position: relative;
+    width: 25%;
+}
+.footer ul li::after {
+    position:absolute;
+    top:50%;
+    right: 0;
+    content: '';
+    height: 20%;
+    margin-top: -5px;
+    border-right:1px solid #666666;
+}
+.footer ul li:nth-of-type(4)::after {
+    display: none;
+}
+.footer ul li a {
+    font-size: 12px;
+    color: #666666;
+}
+.footer p {
+    font-size: 12px;
+    color: #999999;
 }
 /* 媒体查询 */
 @media screen and (min-width:750px) {
