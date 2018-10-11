@@ -24,7 +24,7 @@
     <!--nav end-->
 
     <!-- swiper -->
-    <div class="swiper-container">
+    <div class="swiper-container swiper1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <a href=""><img src="./static/wap/images/index/banner.jpg" alt=""></a>
@@ -106,15 +106,17 @@
         <p>今日仅剩<span>1</span><span>5</span><span>9</span>个名额</p>
         <form action="">
             <div>
-                <span></span> <input type="text" placeholder="请输入您的称呼">
+                <span></span> <input type="text" placeholder="请输入您的称呼" onkeyup="value=value.replace(/[^\D]/g,'')">
+                <p>*姓名错误*</p>
             </div>
             <div>
-                <span></span> <input type="text" placeholder="请输入手机号抢免费设计名额">
+                <span></span> <input type="text" placeholder="请输入手机号抢免费设计名额" onkeyup="value=value.replace(/[^\d]/g,'')">
+                <p>*号码错误*</p>
             </div>
             <button>宁波</button><select name="" id="">
                 <option value="">慈溪</option>
             </select>
-            <button>立即获取4套免费方案</button>
+            <button type="submit">立即获取4套免费方案</button>
         </form>
     </div>
     <!-- free end -->
@@ -133,25 +135,25 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>05-03</td>
+                    <td>05-01</td>
                     <td>慈溪市</td>
-                    <td>王女士</td>
+                    <td>钱先生</td>
+                    <td>绿城惠园</td>
+                </tr>
+                <tr>
+                    <td>05-02</td>
+                    <td>慈溪市</td>
+                    <td>吕女士</td>
                     <td>绿城惠园</td>
                 </tr>
                 <tr>
                     <td>05-03</td>
                     <td>慈溪市</td>
-                    <td>王女士</td>
+                    <td>高先生</td>
                     <td>绿城惠园</td>
                 </tr>
                 <tr>
-                    <td>05-03</td>
-                    <td>慈溪市</td>
-                    <td>王女士</td>
-                    <td>绿城惠园</td>
-                </tr>
-                <tr>
-                    <td>05-03</td>
+                    <td>05-04</td>
                     <td>慈溪市</td>
                     <td>王女士</td>
                     <td>绿城惠园</td>
@@ -208,12 +210,69 @@
     <div class="zxstyle">
         <p>装修灵感</p>
         <ul>
-            <li class="zxstyle-active"><a href="#">风格</a></li>
-            <li><a href="#">户型</a></li>
-            <li><a href="#">空间</a></li>
-            <li><a href="#">局部</a></li>
+            <li class="zxstyle-active" id="fg"><a>风格</a></li>
+            <li id="hx"><a>户型</a></li>
+            <li id="kj"><a>空间</a></li>
+            <li id="jb"><a>局部</a></li>
         </ul>
-        <div class="swiper-container zxstyle-swiper">
+        <div class="swiper-container zxstyle-swiper fg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic1.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic8.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container zxstyle-swiper hx">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic1.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic8.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container zxstyle-swiper kj">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic1.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./static/wap/images/index/pic8.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container zxstyle-swiper jb">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="#">
@@ -246,7 +305,7 @@
             <form action="">
                 <button>所在区域</button>
                 <div>
-                    <input type="text" placeholder="房屋面积"><span>m²</span>
+                    <input type="text" placeholder="房屋面积" onkeyup="value=value.replace(/[^\d]/g,'')"><span>m²</span>
                 </div>
             </form>
             <button>获取<p></p>报价</button>
@@ -313,13 +372,13 @@
         <p>Copyright © 2018 链装修网版权所有</p>
     </div>
     <!-- footer end -->
-    <script src="./static/wap/js/jquery-1.11.3.min.js"></script>
+    <script src="./static/wap/js/jquery-1.9.1.min.js"></script>
     <script src="./static/wap/js/swiper.min.js"></script>
     <script src="./static/wap/js/index.js"></script>
     <script>
-        var mySwiper = new Swiper('.swiper-container', {
+        var mySwiper = new Swiper('.swiper1', {
             direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
+            loop: false, // 循环模式选项
             // 如果需要分页器
             pagination: {
                 el: '.swiper-pagination',
@@ -327,7 +386,7 @@
         });
         var mySwiper = new Swiper('.swiper2', {
             direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
+            loop: false, // 循环模式选项
             spaceBetween: 10,
             slidesPerView: 2.5,
             slidesPerGroup: 1,
@@ -336,9 +395,9 @@
                 el: '.swiper-pagination',
             },
         });
-        var mySwiper = new Swiper('.zxstyle-swiper', {
+        var mySwiper = new Swiper('.fg', {
             direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
+            loop: false, // 循环模式选项
             spaceBetween: 10,
             slidesPerView: 2.5,
             slidesPerGroup: 1,

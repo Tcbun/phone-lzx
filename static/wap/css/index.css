@@ -61,7 +61,7 @@ a {
 .nav .nav-icon {
     width: 20px;
     height: 20px;
-    margin: 10px auto;
+    margin: 0px auto;
     background: url("../images/sprite.png") 51px -34px;
     position: absolute;
     right: 15px;
@@ -353,6 +353,27 @@ a {
     height: 36px;
     border: 1px solid #cccccc;
     margin-bottom: 10px;
+    position: relative;
+}
+.free form div:nth-of-type(1) {
+    position: relative;
+}
+.free form div:nth-of-type(1) p {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+.free form div:nth-of-type(2) {
+    position: relative;
+}
+.free form div:nth-of-type(2) p {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: red;
+    display: none;
 }
 .free form div span {
     display: inline-block;
@@ -532,8 +553,8 @@ a {
 .recommend > a:last-child {
     display: block;
     width: 200px;
-    height: 26px;
-    line-height: 26px;
+    height: 36px;
+    line-height: 36px;
     vertical-align: middle;
     background: #127a59;
     color: #fff;
@@ -597,8 +618,8 @@ a {
 .zxstyle > a:last-child {
     display: block;
     width: 200px;
-    height: 26px;
-    line-height: 26px;
+    height: 36px;
+    line-height: 36px;
     vertical-align: middle;
     background: #127a59;
     color: #fff;
@@ -606,12 +627,24 @@ a {
     padding-bottom: 10px;
     font-size: 12px;
 }
-.zxstyle .swiper-wrapper .swiper-slide {
+.zxstyle-swiper .swiper-wrapper .swiper-slide {
     overflow: hidden;
 }
-.zxstyle .swiper-wrapper .swiper-slide img a img {
+.zxstyle-swiper .swiper-wrapper .swiper-slide img a img {
     width: 100%;
     height: 100%;
+}
+.fg {
+    display: block;
+}
+.hx {
+    display: none;
+}
+.kj {
+    display: none;
+}
+.jb {
+    display: none;
 }
 /* price */
 .price {
@@ -848,8 +881,8 @@ a {
 .news > a:last-child {
     display: block;
     width: 200px;
-    height: 26px;
-    line-height: 26px;
+    height: 36px;
+    line-height: 36px;
     vertical-align: middle;
     background: #127a59;
     color: #fff;
