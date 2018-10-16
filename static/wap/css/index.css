@@ -119,6 +119,21 @@ a {
     color: #fff;
     border-radius: 5px;
     border-bottom-left-radius: 0;
+    animation: after 1.5s infinite;
+    -moz-animation: after 1.5s infinite;
+    -webkit-animation: after 1.5s infinite;
+    -o-animation: after 1.5s infinite;
+}
+@keyframes after {
+    0% {
+        right: -33px;
+    }
+    50% {
+        right: -30px;
+    }
+    100% {
+        right: -33px;
+    }
 }
 .nav2 ul li:nth-of-type(3) a > div {
     width: 44px;
@@ -137,6 +152,10 @@ a {
     color: #fff;
     border-radius: 5px;
     border-bottom-left-radius: 0;
+    animation: after 1.5s infinite;
+    -moz-animation: after 1.5s infinite;
+    -webkit-animation: after 1.5s infinite;
+    -o-animation: after 1.5s infinite;
 }
 .nav2 ul li:nth-of-type(4) a > div {
     width: 44px;
@@ -168,6 +187,7 @@ a {
     padding: 15px 0px 10px 15px;
 }
 .feature .left p:nth-of-type(1) span {
+    display: inline-block;
     padding: 5px;
     color: #fff;
     background: #f39800;
@@ -175,6 +195,21 @@ a {
     border-top-left-radius: 10px;
     margin-left: 5px;
     font-size: 12px;
+    animation: scaleFree 1.5s infinite;
+    -moz-animation: scaleFree 1.5s infinite;
+    -o-animation: scaleFree 1.5s infinite;
+    -webkit-animation: scaleFree 1.5s infinite;
+}
+@keyframes scaleFree {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .feature .left p:nth-of-type(2) {
     margin-left: 15px;
@@ -291,6 +326,10 @@ a {
     margin: 10px auto;
     background: #fff;
     text-align: center;
+    position: relative;
+}
+.free > div > span:nth-of-type(1) {
+    margin-left: 25px;
 }
 .free > p:nth-of-type(1) {
     text-align: center;

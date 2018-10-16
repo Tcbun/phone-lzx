@@ -8,9 +8,39 @@ $(document).ready(function () {
     var gewei = $(".free p:nth-of-type(2) span:nth-of-type(3)");
     var shiwei = $(".free p:nth-of-type(2) span:nth-of-type(2)");
     var baiwei = $(".free p:nth-of-type(2) span:nth-of-type(1)");
-    var geweiIndex = $(".free p:nth-of-type(2) span:nth-of-type(3)").text();
-    var shiweiIndex = $(".free p:nth-of-type(2) span:nth-of-type(2)").text();
-    var baiweiIndex = $(".free p:nth-of-type(2) span:nth-of-type(1)").text();
+    var geweiIndex = 9;
+    var shiweiIndex = 9;
+    var baiweiIndex = 0;
+    var rd = Math.floor(Math.random() * 9 + 0);
+    var timer = null;
+    var rdTimer = setInterval(rdCount, 50)
+    var rdTimer2 = null;
+    var rdTimer3 = null;
+    var out1 = setTimeout(function () {
+        clearInterval(rdTimer);
+        rdTimer2 = setInterval(rdCount, 350);
+    }, 1000)
+    var out2 = setTimeout(function () {
+        clearInterval(rdTimer2);
+        rdTimer3 = setInterval(rdCount, 700);
+    }, 2000)
+    var out3 = setTimeout(function () {
+        clearInterval(rdTimer3);
+        clearTimeout(out1);
+        clearTimeout(out2);
+        gewei.text("9");
+        shiwei.text("9");
+        baiwei.text("0");
+        setInterval(calc,100)
+    }, 3000)
+    function rdCount() {
+        rd1 = Math.floor(Math.random() * 9 + 0);
+        rd2 = Math.floor(Math.random() * 9 + 0);
+        rd3 = Math.floor(Math.random() * 9 + 0);
+        gewei.text(rd1);
+        shiwei.text(rd2);
+        baiwei.text(rd3);
+    }
     function calc() {
         if (geweiIndex === -1) {
             geweiIndex = 9;
@@ -31,15 +61,14 @@ $(document).ready(function () {
         if (baiweiIndex === 0 && shiweiIndex === 0 && geweiIndex === 0) {
             clearInterval(timer);
             geweiIndex = 9;
-            shiweiIndex = 5;
-            baiweiIndex = 1;
+            shiweiIndex = 9;
+            baiweiIndex = 0;
             baiwei.text(baiweiIndex);
             shiwei.text(shiweiIndex);
             gewei.text(geweiIndex);
             timer = setInterval(calc, 1000);
         }
     }
-    var timer = setInterval(calc, 1000)
     // 表单验证
     var nameInput = $(".free form div:nth-of-type(1) input");
     var phoneInput = $(".free form div:nth-of-type(2) input");
@@ -161,5 +190,16 @@ $(document).ready(function () {
                 el: '.swiper-pagination',
             },
         })
+    })
+    $(".pageIn-nav span").click(function(){
+        var screenHeight = $(".dialog").height();
+        $(".dialog > ul").height(screenHeight);
+        $(".dialog").fadeIn();
+    })
+    $(".dialog").click(function(){
+        $(this).fadeOut();
+    })
+    $(".pageIn-nav a").click(function(){
+        history.go(-1);
     })
 })

@@ -1,0 +1,225 @@
+/*public*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    color: #333333;
+}
+body {
+    padding: 10px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+}
+/* nav */
+.pageIn-nav {
+    height: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.pageIn-nav a {
+    line-height: 40px;
+    font-size: 22px;
+    float: left;
+}
+.pageIn-nav > p {
+    max-width: 750px;
+    color: #127a59;
+    padding: 12px 0 15px 0;
+    position: relative;
+    text-align: center;
+}
+.pageIn-nav > p::before {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 25px;
+    left: 50%;
+    margin-left: -70px;
+    background: url("../images/sprite.png") -266px 29px;
+    margin-right: 5px;
+}
+.pageIn-nav > p::after {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 25px;
+    left: 50%;
+    background: url("../images/sprite.png") -100px 29px;
+    margin-left:50px;
+}
+.pageIn-nav span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/sprite.png) -165px 37px;
+    cursor: pointer;
+}
+/* picSet */
+.masonry {
+    /* 列数 */
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    /* 列间距 */
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+}
+.masonry .item {
+    width: 168px;
+    margin-right: 2%;
+    margin-bottom: 2em;
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+.masonry .item img {
+    width: 168px;
+    display: block;
+}
+.masonry .item p {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border-left: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+/* dialog */
+.dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    display: none;
+}
+.dialog .big_title {
+    width: 230px;
+    color: #127a59;
+    text-align: center;
+    padding-top: 10px;
+    background: #fff;
+    margin-right: 0;
+}
+.dialog > ul {
+    position:absolute;
+    width: 230px;
+    background: #fff;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow:scroll;
+}
+.dialog > ul > li {
+    margin-bottom: 10px;
+}
+.dialog ul .title:nth-of-type(1) {
+    margin-top: 20px;
+}
+.dialog ul .title {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.dialog ul .title span:last-child {
+    position: absolute;
+    padding-right: 10px;
+    right:0;
+    font-size: 16px;
+}
+.dialog ul .title span:last-child:hover {
+    cursor: pointer;
+}
+.dialog ul .choice ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dialog ul .choice ul li {
+    width: 64px;
+    height: 25px;
+    background: #eeeeee;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.dialog ul .choice ul li a {
+    font-size: 12px;
+}
+/* footer */
+.footer {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 10px;
+}
+.footer a {
+    display: block;
+    width: 100%;
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.footer a span {
+    font-size: 20px;
+    color: #127a59;
+}
+.footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer ul li {
+    position: relative;
+    width: 25%;
+}
+.footer ul li::after {
+    position:absolute;
+    top:50%;
+    right: 0;
+    content: '';
+    height: 20%;
+    margin-top: -5px;
+    border-right:1px solid #666666;
+}
+.footer ul li:nth-of-type(4)::after {
+    display: none;
+}
+.footer ul li a {
+    font-size: 12px;
+    color: #666666;
+}
+.footer p {
+    font-size: 12px;
+    color: #999999;
+}
+/* 媒体查询 */
+@media screen and (min-width:750px) {
+
+
+}
